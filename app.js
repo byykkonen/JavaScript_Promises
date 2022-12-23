@@ -28,21 +28,12 @@ let ul = document.querySelector("#list");
       list.forEach((hobbit) => {
       let li = document.createElement("li");
       li.textContent = hobbit;
-     ul.appendChild(li);
+      ul.appendChild(li);
   });
 })
   .catch((err) => {
-    // TODO: If the promise rejects with the failure object
-// Display the failure message in the paragraph element with id="error" (check index.html file)
-
-    errorPara.textContent = err.message;
+    feedbackP.textContent = err.message;
   });
-
-
-
-
-
-
 
 updateDOMList();
 
